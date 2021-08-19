@@ -1,0 +1,146 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.test"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="20"
+9        android:targetSdkVersion="30" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/calvin/Desktop/test/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/calvin/Desktop/test/android/app/src/debug/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+15-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:22:5-65
+15-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:22:22-62
+16    <uses-feature
+16-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:25:5-27:36
+17        android:name="android.hardware.camera"
+17-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:26:9-47
+18        android:required="false" />
+18-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:27:9-33
+19    <uses-feature
+19-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:28:5-30:36
+20        android:name="android.hardware.camera.front"
+20-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:29:9-53
+21        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+21-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:30:9-33
+22    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+23    <uses-feature
+23-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:33:5-35:36
+24        android:name="android.hardware.camera.autofocus"
+24-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:34:9-57
+25        android:required="false" />
+25-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:35:9-33
+26    <uses-feature
+26-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:36:5-38:36
+27        android:name="android.hardware.camera.flash"
+27-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:37:9-53
+28        android:required="false" />
+28-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:38:9-33
+29    <uses-feature
+29-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:39:5-41:36
+30        android:name="android.hardware.screen.landscape"
+30-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:40:9-57
+31        android:required="false" />
+31-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:41:9-33
+32    <uses-feature
+32-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:42:5-44:36
+33        android:name="android.hardware.wifi"
+33-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:43:9-45
+34        android:required="false" />
+34-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:44:9-33
+35
+36    <application
+36-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:3:4-40:19
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.5.0] /Users/calvin/.gradle/caches/transforms-3/1ab2e98a52a4d47eb9449c8012489a07/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+38        android:debuggable="true"
+39        android:icon="@mipmap/ic_launcher"
+39-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:5:9-43
+40        android:label="test" >
+40-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:4:9-29
+41        <activity
+41-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:6:9-34:20
+42            android:name="com.example.test.MainActivity"
+42-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:7:13-41
+43            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+43-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:10:13-163
+44            android:hardwareAccelerated="true"
+44-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:11:13-47
+45            android:launchMode="singleTop"
+45-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:8:13-43
+46            android:theme="@style/LaunchTheme"
+46-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:9:13-47
+47            android:windowSoftInputMode="adjustResize" >
+47-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:12:13-55
+48
+49            <!--
+50                 Specifies an Android theme to apply to this Activity as soon as
+51                 the Android process has started. This theme is visible to the user
+52                 while the Flutter UI initializes. After that, this theme continues
+53                 to determine the Window background behind the Flutter UI.
+54            -->
+55            <meta-data
+55-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:17:13-20:17
+56                android:name="io.flutter.embedding.android.NormalTheme"
+56-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:18:15-70
+57                android:resource="@style/NormalTheme" />
+57-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:19:15-52
+58            <!--
+59                 Displays an Android View that continues showing the launch screen
+60                 Drawable until Flutter paints its first frame, then this splash
+61                 screen fades out. A splash screen is useful to avoid any visual
+62                 gap between the end of Android's launch screen and the painting of
+63                 Flutter's first frame.
+64            -->
+65            <meta-data
+65-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:26:13-29:17
+66                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+66-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:27:15-79
+67                android:resource="@drawable/launch_background" />
+67-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:28:15-61
+68
+69            <intent-filter>
+69-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:30:13-33:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:31:17-68
+70-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:31:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:32:17-76
+72-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:32:27-74
+73            </intent-filter>
+74        </activity>
+75        <!--
+76             Don't delete the meta-data below.
+77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+78        -->
+79        <meta-data
+79-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:37:9-39:33
+80            android:name="flutterEmbedding"
+80-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:38:13-44
+81            android:value="2" />
+81-->/Users/calvin/Desktop/test/android/app/src/main/AndroidManifest.xml:39:13-30
+82
+83        <activity
+83-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:47:9-53:63
+84            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+84-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:48:13-74
+85            android:clearTaskOnLaunch="true"
+85-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:49:13-45
+86            android:screenOrientation="sensorLandscape"
+86-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:50:13-56
+87            android:stateNotNeeded="true"
+87-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:51:13-42
+88            android:theme="@style/zxing_CaptureTheme"
+88-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:52:13-54
+89            android:windowSoftInputMode="stateAlwaysHidden" />
+89-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/calvin/.gradle/caches/transforms-3/6f13b3a484d5e5d0cbb22f042246cf64/transformed/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:53:13-60
+90    </application>
+91
+92</manifest>
