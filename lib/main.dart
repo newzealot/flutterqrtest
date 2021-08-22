@@ -37,19 +37,19 @@ class _ScanQRState extends State<ScanQR> {
       body: Stack(
         children: <Widget>[
           Container(child: _buildQrView(context)),
-          // Container(
-          //   alignment: FractionalOffset(0.5, 0.75),
-          //   height: MediaQuery.of(context).size.height,
-          //   width: MediaQuery.of(context).size.width,
-          //   child: Text(
-          //     'Scan the Location QR code',
-          //     style: TextStyle(
-          //       color: Colors.white,
-          //       fontSize: 18,
-          //       fontWeight: FontWeight.bold,
-          //     ),
-          //   ),
-          // ),
+          Container(
+            alignment: FractionalOffset(0.5, 0.75),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Text(
+              'Scan the Location QR code',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ],
       ),
     );
