@@ -34,7 +34,25 @@ class _ScanQRState extends State<ScanQR> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(child: _buildQrView(context)),
+      body: Stack(
+        children: [
+          Container(
+            child: _buildQrView(context),
+          ),
+          Container(
+            alignment: FractionalOffset(0.5, 0.75),
+            color: Colors.transparent,
+            child: Text(
+              'Scan the Location code',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 
