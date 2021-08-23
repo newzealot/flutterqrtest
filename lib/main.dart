@@ -48,18 +48,24 @@ class _ScanQRState extends State<ScanQR> {
               alignment: Alignment.center,
               children: [
                 // QRView is affected by Colors.black54
-                QRView(
-                  key: qrKey,
-                  onQRViewCreated: _onQRViewCreated,
-                  onPermissionSet: (ctrl, p) =>
-                      _onPermissionSet(context, ctrl, p),
+                Opacity(
+                  opacity: 0.2,
+                  child: QRView(
+                    key: qrKey,
+                    onQRViewCreated: _onQRViewCreated,
+                    onPermissionSet: (ctrl, p) =>
+                        _onPermissionSet(context, ctrl, p),
+                  ),
                 ),
                 // Not affected by Colors.black54 because BlendMode is srcOut and color is not transparent
-                Container(
-                  height: scanArea,
-                  width: scanArea,
-                  decoration: BoxDecoration(
-                    color: Colors.black, // Not transparent.
+                Opacity(
+                  opacity: 0.2,
+                  child: Container(
+                    height: scanArea,
+                    width: scanArea,
+                    decoration: BoxDecoration(
+                      color: Colors.black, // Not transparent.
+                    ),
                   ),
                 ),
               ],
@@ -67,7 +73,7 @@ class _ScanQRState extends State<ScanQR> {
           ),
           // Drawing a transparent border
           Opacity(
-            opacity: 0,
+            opacity: 0.2,
             child: Container(
               alignment: Alignment.center,
               height: scanArea,
@@ -83,7 +89,7 @@ class _ScanQRState extends State<ScanQR> {
           ),
           // Drawing the Text
           Opacity(
-            opacity: 0,
+            opacity: 0.2,
             child: Container(
               alignment: FractionalOffset(0.5, 0.75),
               child: Text(
