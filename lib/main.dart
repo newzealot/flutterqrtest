@@ -41,11 +41,10 @@ class _ScanQRState extends State<ScanQR> {
           ),
           Container(
             alignment: FractionalOffset(0.5, 0.75),
-            color: Colors.red,
             child: Text(
               'Scan the Location code',
               style: TextStyle(
-                color: Colors.red,
+                color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
               ),
@@ -80,17 +79,17 @@ class _ScanQRState extends State<ScanQR> {
 
   void _onQRViewCreated(QRViewController controller) {
     this.controller = controller;
+    bool scanned = false;
     controller.scannedDataStream.listen((scanData) {
-      setState(() {
-        result = scanData;
-        if (result != null) {
-          controller.stopCamera();
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => SecondRoute(result!.code)),
-          );
-        }
-      });
+      // setState(() {
+      if (!scanned) {
+        scanned = true;
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SecondRoute(scanData.code)),
+        );
+      }
+      // });
     });
   }
 
