@@ -41,11 +41,11 @@ class _ScanQRState extends State<ScanQR> {
           ),
           Container(
             alignment: FractionalOffset(0.5, 0.75),
-            color: Colors.transparent,
+            color: Colors.red,
             child: Text(
               'Scan the Location code',
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.red,
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
               ),
