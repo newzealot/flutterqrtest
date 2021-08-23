@@ -55,7 +55,7 @@ class _ScanQRState extends State<ScanQR> {
           ),
           // Drawing the Text
           Opacity(
-            opacity: 1,
+            opacity: 0.8,
             child: Container(
               alignment: FractionalOffset(0.5, 0.75),
               child: Text(
