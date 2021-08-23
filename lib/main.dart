@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 void main() => runApp(MaterialApp(home: ScanQR()));
@@ -33,12 +34,51 @@ class _ScanQRState extends State<ScanQR> {
 
   @override
   Widget build(BuildContext context) {
+    var scanArea = (MediaQuery.of(context).size.width < 400 ||
+            MediaQuery.of(context).size.height < 400)
+        ? 150.0
+        : 300.0;
     return Scaffold(
       body: Stack(
+        alignment: Alignment.center,
         children: [
-          Container(
-            child: _buildQrView(context),
+          ColorFiltered(
+            colorFilter: ColorFilter.mode(Colors.black54, BlendMode.srcOut),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                // QRView is affected by Colors.black54
+                QRView(
+                  key: qrKey,
+                  onQRViewCreated: _onQRViewCreated,
+                  onPermissionSet: (ctrl, p) =>
+                      _onPermissionSet(context, ctrl, p),
+                ),
+                // Not affected by Colors.black54 because BlendMode is srcOut and color is not transparent
+                Container(
+                  height: scanArea,
+                  width: scanArea,
+                  decoration: BoxDecoration(
+                    color: Colors.black, // Not transparent.
+                  ),
+                ),
+              ],
+            ),
           ),
+          // Drawing a transparent border
+          Container(
+            alignment: Alignment.center,
+            height: scanArea,
+            width: scanArea,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.white,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+          // Drawing the Text
           Container(
             alignment: FractionalOffset(0.5, 0.75),
             child: Text(
@@ -52,28 +92,6 @@ class _ScanQRState extends State<ScanQR> {
           )
         ],
       ),
-    );
-  }
-
-  Widget _buildQrView(BuildContext context) {
-    // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
-    var scanArea = (MediaQuery.of(context).size.width < 400 ||
-            MediaQuery.of(context).size.height < 400)
-        ? 150.0
-        : 300.0;
-    // To ensure the Scanner view is properly sizes after rotation
-    // we need to listen for Flutter SizeChanged notification and update controller
-    return QRView(
-      key: qrKey,
-      onQRViewCreated: _onQRViewCreated,
-      overlay: QrScannerOverlayShape(
-        borderColor: Colors.white,
-        borderRadius: 5,
-        borderLength: scanArea / 2 + 3 * 2,
-        borderWidth: 3,
-        cutOutSize: scanArea,
-      ),
-      onPermissionSet: (ctrl, p) => _onPermissionSet(context, ctrl, p),
     );
   }
 
