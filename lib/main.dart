@@ -42,50 +42,16 @@ class _ScanQRState extends State<ScanQR> {
       body: Stack(
         alignment: Alignment.center,
         children: [
-          ColorFiltered(
-            colorFilter: ColorFilter.mode(Colors.black54, BlendMode.srcOut),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                // QRView is affected by Colors.black54
-                Opacity(
-                  opacity: 0.2,
-                  child: QRView(
-                    key: qrKey,
-                    onQRViewCreated: _onQRViewCreated,
-                    onPermissionSet: (ctrl, p) =>
-                        _onPermissionSet(context, ctrl, p),
-                  ),
-                ),
-                // Not affected by Colors.black54 because BlendMode is srcOut and color is not transparent
-                Opacity(
-                  opacity: 0.2,
-                  child: Container(
-                    height: scanArea,
-                    width: scanArea,
-                    decoration: BoxDecoration(
-                      color: Colors.black, // Not transparent.
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          // Drawing a transparent border
-          Opacity(
-            opacity: 0.2,
-            child: Container(
-              alignment: Alignment.center,
-              height: scanArea,
-              width: scanArea,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.white,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(5),
-              ),
-            ),
+          QRView(
+            key: qrKey,
+            onQRViewCreated: _onQRViewCreated,
+            overlay: QrScannerOverlayShape(
+                borderColor: Colors.white,
+                borderRadius: 5,
+                borderLength: scanArea / 2 + 4,
+                borderWidth: 2,
+                cutOutSize: scanArea),
+            onPermissionSet: (ctrl, p) => _onPermissionSet(context, ctrl, p),
           ),
           // Drawing the Text
           Opacity(
