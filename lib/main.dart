@@ -66,27 +66,33 @@ class _ScanQRState extends State<ScanQR> {
             ),
           ),
           // Drawing a transparent border
-          Container(
-            alignment: Alignment.center,
-            height: scanArea,
-            width: scanArea,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.white,
-                width: 2,
+          Opacity(
+            opacity: 0,
+            child: Container(
+              alignment: Alignment.center,
+              height: scanArea,
+              width: scanArea,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.white,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(5),
               ),
-              borderRadius: BorderRadius.circular(5),
             ),
           ),
           // Drawing the Text
-          Container(
-            alignment: FractionalOffset(0.5, 0.75),
-            child: Text(
-              'Scan the Location code',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w300,
+          Opacity(
+            opacity: 0,
+            child: Container(
+              alignment: FractionalOffset(0.5, 0.75),
+              child: Text(
+                'Scan the Location code',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
           )
@@ -134,9 +140,11 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Route"),
+        title: Text("Next Page"),
       ),
-      body: Center(
+      body: Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.all(10),
         child: Text(
           location,
         ),
