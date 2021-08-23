@@ -54,8 +54,9 @@ class _ScanQRState extends State<ScanQR> {
             onPermissionSet: (ctrl, p) => _onPermissionSet(context, ctrl, p),
           ),
           // Drawing the Text
+          // Opacity is need to prevent white out in production
           Opacity(
-            opacity: 0.8,
+            opacity: 0.99,
             child: Container(
               alignment: FractionalOffset(0.5, 0.75),
               child: Text(
@@ -63,7 +64,7 @@ class _ScanQRState extends State<ScanQR> {
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
@@ -116,7 +117,7 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Container(
         alignment: Alignment.center,
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.all(20),
         child: Text(
           location,
         ),
